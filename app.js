@@ -1,9 +1,9 @@
 let express = require('express');
 let app = express();
 /**
- * public - имя папки где хранится статика
+ * static - имя папки где хранится статика
  */
-app.use(express.static('public'));
+app.use(express.static('static'));
 /**
  *  задаем шаблонизатор
  */
@@ -19,7 +19,7 @@ let mysql = require('mysql');
 let con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'root',
+  password: '',
   database : 'market'
 });
 
